@@ -344,6 +344,22 @@ To verify or configure:
 }
 ```
 
+
+## Optional: Codex TOML Defaults
+
+Task Master uses `.taskmaster/config.json`.
+Codex CLI can also use TOML defaults at `~/.codex/config.toml`.
+
+Example:
+
+```toml
+model = "gpt-5-codex"
+approval_policy = "on-failure"
+sandbox_mode = "workspace-write"
+```
+
+Use JSON for Task Master model routing, and TOML for Codex CLI runtime defaults.
+
 ## Troubleshooting
 
 ### "codex: command not found" Error
