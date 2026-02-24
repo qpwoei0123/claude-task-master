@@ -360,6 +360,30 @@ sandbox_mode = "workspace-write"
 
 Use JSON for Task Master model routing, and TOML for Codex CLI runtime defaults.
 
+Expanded real-world example:
+
+```toml
+model = "gpt-5.3-codex-spark"
+model_reasoning_effort = "xhigh"
+personality = "pragmatic"
+
+[projects."/Users/your-name"]
+trust_level = "trusted"
+
+# IMPORTANT: top-level key is mcp_servers (not mcpServers)
+[mcp_servers."swagger-parser"]
+command = "npx"
+args = ["-y", "swagger-parser-mcp-server"]
+
+[mcp_servers.figma]
+url = "https://mcp.figma.com/mcp"
+
+[features]
+collab = true
+apps = true
+multi_agent = true
+```
+
 ## Troubleshooting
 
 ### "codex: command not found" Error
